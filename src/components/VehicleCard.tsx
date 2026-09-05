@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Vehicle } from "@/data/vehicles";
 
 export default function VehicleCard({ v, state, onSelect }: { v: Vehicle; state?: "available"|"held"|"booked"|"blocked"; onSelect?: ()=>void }){
@@ -6,17 +7,15 @@ export default function VehicleCard({ v, state, onSelect }: { v: Vehicle; state?
   const isTT = v.category==="Tempo Traveller";
   return (
     <div className={`bg-white border rounded-xl overflow-hidden flex flex-col card-hover ${disabled?"opacity-70":""}`} style={{borderColor:"var(--rule)"}}>
-      <div className="h-[142px] bg-[var(--paper)] border-b border-[var(--rule)] grid place-items-center relative overflow-hidden card-img">
-        <div className="absolute inset-0 opacity-20" style={{backgroundImage:"linear-gradient(to right, var(--rule) 1px, transparent 1px)", backgroundSize:"20px 100%"}}></div>
+      <div className="h-[168px] relative overflow-hidden bg-[var(--paper)] border-b border-[var(--rule)]">
+        <Image src={v.image} alt={v.imageAlt} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover card-img" priority={false}/>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none"></div>
         <div className="absolute top-2 left-2 flex gap-1.5">
-          <span className="bg-white border border-[var(--rule)] text-xs px-2 py-1 font-medium rounded-full">{v.category} • {v.seater}</span>
-          <span className={`text-xs px-2 py-1 font-bold border rounded-full ${v.ac?"bg-[var(--ink)] text-white border-[var(--ink)]":"bg-white border-[var(--rule)]"}`}>{v.ac?"AC":"NON-AC"}</span>
+          <span className="bg-white/95 backdrop-blur border border-white/60 text-xs px-2.5 py-1 font-medium rounded-full shadow-sm">{v.category} • {v.seater}</span>
+          <span className={`text-xs px-2.5 py-1 font-bold border rounded-full shadow-sm ${v.ac?"bg-[var(--ink)] text-white border-[var(--ink)]":"bg-white/95 border-white/60"}`}>{v.ac?"AC":"NON-AC"}</span>
         </div>
         {isTT && <div className="absolute top-0 right-0 w-1 h-full bg-[var(--brass)]"></div>}
-        {state && <span className={`absolute bottom-2 right-2 text-xs px-2 py-1 font-bold border rounded-full ${state==="available"?"bg-emerald-600 text-white border-emerald-700":state==="held"?"bg-amber-500 text-white border-amber-600":state==="booked"?"bg-[var(--ink)] text-white":"bg-red-600 text-white"}`}>{state.toUpperCase()}</span>}
-        <div className="w-[112px] h-[54px] bg-white border border-[var(--rule)] grid place-items-center shadow-sm rounded-lg">
-          <span className="text-xs tracking-[0.18em] font-bold">{isTT? v.seater+" SEAT": v.name.toUpperCase()}</span>
-        </div>
+        {state && <span className={`absolute bottom-2 right-2 text-xs px-2.5 py-1 font-bold border rounded-full shadow-sm ${state==="available"?"bg-emerald-600 text-white border-emerald-700":state==="held"?"bg-amber-500 text-white border-amber-600":state==="booked"?"bg-[var(--ink)] text-white":"bg-red-600 text-white"}`}>{state.toUpperCase()}</span>}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-[var(--brass)]"></div>
       </div>
       <div className="p-4 flex-1 flex flex-col gap-3">
