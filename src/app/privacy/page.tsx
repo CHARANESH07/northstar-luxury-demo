@@ -1,0 +1,2 @@
+export const metadata={ title:"Privacy" };
+export default function Privacy(){ return <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12"><h1 className="text-3xl font-bold" style={{fontFamily:"var(--font-display)"}}>Privacy</h1><p className="text-sm text-[var(--muted)] mt-3 leading-6">Demo only. No real data stored server-side beyond in-memory holds (reset on deploy). Contact data is not persisted in Zone 1.</p></div>; }

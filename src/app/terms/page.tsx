@@ -1,0 +1,2 @@
+export const metadata={ title:"Terms" };
+export default function Terms(){ return <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12"><h1 className="text-3xl font-bold" style={{fontFamily:"var(--font-display)"}}>Terms</h1><p className="text-sm text-[var(--muted)] mt-3 leading-6">Mock booking — no real payment captures. Cancellation: free until 24h before pickup, 50% after. Taxes at actuals. Demo “confirm” is mock verified.</p></div>; }

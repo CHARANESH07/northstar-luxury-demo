@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){ return <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16 text-center"><h1 className="text-4xl font-bold" style={{fontFamily:"var(--font-display)"}}>404</h1><p className="text-[var(--muted)] mt-2">Page not found.</p><Link href="/" className="inline-block mt-6 bg-[var(--ink)] text-white px-6 py-3 rounded-full font-semibold">Back to Home</Link></div>; }
