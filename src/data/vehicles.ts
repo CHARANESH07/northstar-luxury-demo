@@ -41,9 +41,9 @@ export const services = [
 export const company = {
   name:"NorthStar Travels",
   tagline:"Travel Together. Arrive Better.",
-  phone:"+91 98101 15661",
+  phone:"+91 98806 01004",
   email:"book@northstartravels.example",
-  whatsapp:"+91 98101 15661",
+  whatsapp:"+91 98806 01004",
   address:"UG 54, Palika Place, Panchkuian Road, New Delhi 110001",
   hours:"24×7 booking & support",
   areas:["Delhi NCR","Jaipur","Agra","Chandigarh","Manali","Goa"],

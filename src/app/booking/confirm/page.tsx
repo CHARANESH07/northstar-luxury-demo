@@ -38,7 +38,7 @@ function ConfirmInner(){
         </div>
         <div className="border-t border-[var(--line)] pt-4 flex gap-2">
           <button onClick={()=>{ const txt=`Booking ${b.id} — ${trip.pickup} → ${trip.drop} on ${trip.date} — ₹${price.total}`; navigator.clipboard.writeText(txt); alert("Copied");}} className="flex-1 bg-white border border-[var(--line)] py-3 rounded-full font-semibold">Copy details</button>
-          <a href={`https://wa.me/919810115661?text=${encodeURIComponent(`Booking ${b.id} ${trip.pickup}→${trip.drop} ${trip.date}`)}`} target="_blank" className="flex-1 text-center bg-[#25D366] text-white py-3 rounded-full font-bold">Share on WhatsApp</a>
+          <a href={`https://wa.me/919880601004?text=${encodeURIComponent(`Booking ${b.id} ${trip.pickup}→${trip.drop} ${trip.date}`)}`} target="_blank" className="flex-1 text-center bg-[#25D366] text-white py-3 rounded-full font-bold">Share on WhatsApp</a>
         </div>
         <div className="text-xs text-[var(--stone)] text-center bg-[var(--paper)] border border-[var(--line)] rounded-xl px-3 py-2">Add to calendar, invoice download, and email are mocked in Zone 1. Real backend will send SMS/email and driver details.</div>
       </div>

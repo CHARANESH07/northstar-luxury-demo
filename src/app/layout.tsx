@@ -23,12 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
         <main id="main" tabIndex={-1} className="flex-1 pb-16 md:pb-0 focus:outline-none"><PageTransition>{children}</PageTransition></main>
         <Footer/>
         <div className="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-[var(--rule)] p-3 flex gap-2 z-40">
-          <a href="tel:+919810115661" className="flex-1 border border-[var(--rule)] py-3 text-center text-sm font-medium">Call</a>
+          <a href="tel:+919880601004" className="flex-1 border border-[var(--rule)] py-3 text-center text-sm font-medium">Call</a>
           <a href="/booking" className="flex-1 bg-[var(--ink)] text-white py-3 text-center text-sm font-semibold">Book</a>
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           "@context":"https://schema.org","@type":"LocalBusiness", name:"NorthStar Travels",
-          telephone:"+919810115661", address:{ "@type":"PostalAddress", addressLocality:"New Delhi", addressCountry:"IN"},
+          telephone:"+919880601004", address:{ "@type":"PostalAddress", addressLocality:"New Delhi", addressCountry:"IN"},
           areaServed:["Delhi NCR","Jaipur","Agra","Chandigarh"], priceRange:"₹₹"
         })}}/>
       </body>
